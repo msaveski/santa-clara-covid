@@ -59,6 +59,6 @@ plt <- df %>%
 
 print(plt)
 
-ggsave("plot.png")
+ggsave("plot.png", width = 8, height = 6)
 
 # END
