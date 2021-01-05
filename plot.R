@@ -21,7 +21,13 @@ df <- dir_ls(path = "data", regexp = "\\.csv$") %>%
 
 # plot
 highlighted_zips <- c(
-  "94305" # stanford's zip
+  # stanford's zip
+  "94301", 
+  "94302",
+  "94303",
+  "94304",
+  "94305",
+  "94306"   # campus
 )
 
 # color the highlighted zips
@@ -47,7 +53,7 @@ plt <- df %>%
   ) +
   scale_x_date(limits = c(min(df$date), max(df$date) + 3)) +
   scale_y_continuous(breaks = scales::pretty_breaks()) +
-  scale_color_manual(values=c("grey70", "black")) +
+  scale_color_manual(values = c("grey70", "black")) +
   labs(
     title = "Santa Clara COVID cases",
     subtitle = str_c("Data as of ", today()),
