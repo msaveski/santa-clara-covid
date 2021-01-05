@@ -56,9 +56,9 @@ plt <- df %>%
   scale_color_manual(values = c("grey70", "black")) +
   labs(
     title = "Santa Clara COVID cases",
-    subtitle = str_c("Data as of ", today()),
+    subtitle = str_c("Data as of ", max(df$date)),
     x = "Date",
-    y = "Rate (per 100k)"
+    y = "Rate (Cases / Population x 100k)"
   ) +
   theme_bw() + 
   theme(legend.position = "none")
