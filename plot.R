@@ -46,13 +46,14 @@ plt <- df %>%
   geom_text_repel(
     aes(label = zipcode),
     size = 3,
-    nudge_x = 1.5,
+    nudge_x = 20,
     segment.color = "grey50",
     segment.size = 0.2,
     data = data_ends
   ) +
-  scale_x_date(limits = c(min(df$date), max(df$date) + 3)) +
-  scale_y_continuous(breaks = scales::pretty_breaks()) +
+  scale_x_date(limits = c(min(df$date), max(df$date) + 20),
+               date_breaks = "4 weeks") +
+  scale_y_continuous(breaks = scales::pretty_breaks(n = 5)) +
   scale_color_manual(values = c("grey70", "black")) +
   labs(
     title = "Santa Clara COVID cases",
@@ -60,7 +61,7 @@ plt <- df %>%
     x = "Date",
     y = "Rate (Cases / Population x 100k)"
   ) +
-  theme_bw() + 
+  theme_bw() +
   theme(legend.position = "none")
 
 print(plt)
