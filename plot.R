@@ -52,7 +52,7 @@ plt <- df %>%
     data = data_ends
   ) +
   scale_x_date(limits = c(min(df$date), max(df$date) + 20),
-               date_breaks = "4 weeks") +
+               date_breaks = "10 weeks") +
   scale_y_continuous(breaks = scales::pretty_breaks(n = 5)) +
   scale_color_manual(values = c("grey70", "black")) +
   labs(
