@@ -5,7 +5,7 @@ library(ggrepel)
 library(fs)
 
 
-setwd("~/code/santa-clara-covid")
+# setwd("~/code/santa-clara-covid")
 
 
 # read all csv into a data frame and parse the dates
